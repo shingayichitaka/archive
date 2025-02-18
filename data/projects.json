@@ -1,0 +1,6 @@
+{
+  "projects": [
+    { "projectName": "Demo", "projectURL": "projects/demo/index.html" },
+    { "projectName": "Demo2", "projectURL": "projects/demo2/index.html" }
+  ]
+}

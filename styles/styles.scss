@@ -1,0 +1,48 @@
+$background: #0f0e17;
+$headline: #fffffe;
+$paragraph: #a7a9be;
+$btn: #ff8906;
+$btn-text: #fffffe;
+
+$stroke: black;
+$main: #fffffe;
+$highlight: #ff8906;
+$secondary: #f25f4c;
+$tertiary: #e53170;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Barlow", sans-serif;
+}
+h1 {
+  font-size: 5rem;
+  margin: 1rem 0;
+}
+h2 {
+  font-size: 3.5rem;
+  margin: 1rem 0;
+}
+h3 {
+  font-size: 3rem;
+  margin: 1rem 0;
+}
+p,
+li,
+a,
+button,
+input {
+  font-size: 2.5rem;
+  margin: 1rem 0;
+}
+input,
+button {
+  font-family: "Barlow", sans-serif;
+}

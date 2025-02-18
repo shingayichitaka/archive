@@ -11,16 +11,23 @@ html {
 
 body {
   font-family: "Barlow", sans-serif;
+  background-color: #0f0e17;
+  color: #fffffe;
+}
+
+main {
+  width: 80%;
+  margin: 0 auto;
 }
 
 h1 {
   font-size: 5rem;
-  margin: 1rem 0;
+  margin: 2rem 0;
 }
 
 h2 {
   font-size: 3.5rem;
-  margin: 1rem 0;
+  margin: 2rem 0;
 }
 
 h3 {
@@ -35,9 +42,21 @@ button,
 input {
   font-size: 2.5rem;
   margin: 1rem 0;
+  color: #a7a9be;
 }
 
 input,
 button {
   font-family: "Barlow", sans-serif;
+}
+
+.project {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border: 0.1rem solid #a7a9be;
+  border-radius: 0.5rem;
+  margin: 1rem 0;
+  padding: 1rem;
 }/*# sourceMappingURL=styles.css.map */

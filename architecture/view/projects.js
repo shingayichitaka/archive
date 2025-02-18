@@ -16,10 +16,10 @@ const renderProjects = async function () {
     .then((res) => res.json())
     .then((data) => {
       console.log(data);
-      data.projects.forEach((value) => {
+      data.projects.forEach((value, index) => {
         const html = `
-            <div>
-              <h3 class="projectName">${value.projectName}</h3>
+            <div class="project">
+              <h3 class="projectName">${index + 1}: ${value.projectName}</h3>
               <p class="projectURL"><a href="${value.projectURL}">Link</a></p>
             </div>
             `;

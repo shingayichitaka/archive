@@ -19,7 +19,8 @@ const addProject = function (projectName) {
 };
 
 const cleanProjectURL = function (projectName) {
-  return projectName.split(" ").join("_").toLowerCase();
+  const newProjectName = projectName.split(" ").join("_").toLowerCase();
+  return `/frontend/projects/${newProjectName}/${newProjectName}.html`;
 };
 
 const cleanProjectName = function (projectName) {

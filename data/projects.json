@@ -1,1 +1,8 @@
-{"projects":[{"projectName":"Bmi Calc","projectURL":"/frontend/projects/bmi_calc/bmi_calc.html"}]}
+{
+  "projects": [
+    {
+      "projectName": "Bmi Calc",
+      "projectURL": "/frontend/projects/bmi_calc/bmi_calc.html"
+    }
+  ]
+}

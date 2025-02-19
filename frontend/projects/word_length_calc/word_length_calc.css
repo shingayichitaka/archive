@@ -1,0 +1,14 @@
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main {
+  width: 50%;
+  margin: 0 auto;
+  border: 0.1rem solid #ffffffc4;
+  padding: 2.5rem;
+  border-radius: 0.75rem;
+}

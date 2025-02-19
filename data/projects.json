@@ -7,6 +7,10 @@
     {
       "projectName": "Simple Interest Calc",
       "projectURL": "/frontend/projects/simple_interest_calc/simple_interest_calc.html"
+    },
+    {
+      "projectName": "Word Length Calc",
+      "projectURL": "/frontend/projects/word_length_calc/word_length_calc.html"
     }
   ]
 }

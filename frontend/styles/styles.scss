@@ -26,7 +26,7 @@ body {
   color: $headline;
 }
 main {
-  width: 80%;
+  width: 60%;
   margin: 0 auto;
 }
 h1 {
@@ -69,6 +69,9 @@ button {
     cursor: pointer;
     background-color: $btn-darker;
   }
+}
+a {
+  text-decoration: none;
 }
 .project {
   display: flex;

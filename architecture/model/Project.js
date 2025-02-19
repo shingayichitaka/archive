@@ -1,7 +1,7 @@
 class Project {
   constructor(projectName) {
     this.projectName = projectName;
-    this.projectURL = `projects/${projectName
+    this.projectURL = `/frontend/projects/${projectName
       .split(" ")
       .join("_")
       .toLowerCase()}/${projectName.split(" ").join("_").toLowerCase()}.html`;

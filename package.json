@@ -4,21 +4,22 @@
   "description": "An archive for all the projects and small mini applications that I am working on.",
   "type": "module",
   "main": "vitest.config.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "vitest --run --reporter verbose",
+    "coverage": "vitest --coverage"
+  },
   "dependencies": {
     "@vitest/coverage-istanbul": "^3.0.5",
     "nodemon": "^3.1.9",
     "vitest": "^3.0.5"
   },
   "devDependencies": {},
-  "scripts": {
-    "test": "vitest --run --reporter verbose",
-    "coverage": "vitest --coverage"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/shingayichitaka/archive.git"
   },
-  "author": "",
+  "author": "Shingayi D. Chitaka",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/shingayichitaka/archive/issues"

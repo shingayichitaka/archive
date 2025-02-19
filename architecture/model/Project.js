@@ -1,10 +1,11 @@
+import { cleanProjectName, cleanProjectURL } from "../../utils.js";
+
 class Project {
   constructor(projectName) {
-    this.projectName = projectName;
-    this.projectURL = `/frontend/projects/${projectName
-      .split(" ")
-      .join("_")
-      .toLowerCase()}/${projectName.split(" ").join("_").toLowerCase()}.html`;
+    this.projectName = `${cleanProjectName(projectName)}`;
+    this.projectURL = `/frontend/projects/${cleanProjectURL(
+      projectName
+    )}/${cleanProjectURL(projectName)}.html`;
   }
 
   get getProjectName() {

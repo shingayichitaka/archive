@@ -18,4 +18,24 @@ const addProject = function (projectName) {
   writeProjectsObjectToJson(projectsObj);
 };
 
-export { getProjectsObject, writeProjectsObjectToJson, addProject };
+const cleanProjectURL = function (projectName) {
+  return projectName.split(" ").join("_").toLowerCase();
+};
+
+const cleanProjectName = function (projectName) {
+  return projectName
+    .split(" ")
+    .map((value) => {
+      const [firstLetter, ...others] = [...value];
+      return `${firstLetter.toUpperCase()}${others.join("").toLowerCase()}`;
+    })
+    .join(" ");
+};
+
+export {
+  getProjectsObject,
+  writeProjectsObjectToJson,
+  addProject,
+  cleanProjectURL,
+  cleanProjectName,
+};

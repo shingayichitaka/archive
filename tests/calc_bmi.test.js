@@ -7,7 +7,14 @@ const calcBMI = function (weight, height) {
 };
 
 test("should return the correct BMI", () => {
-  const result = calcBMI(150, 1.82);
-  const expected = 45.28;
+  // Arrange
+  const weight = 150;
+  const height = 1.82;
+
+  // Act
+  const result = calcBMI(weight, height);
+
+  // Assert
+  const expected = Number((weight / height ** 2).toFixed(2));
   expect(result).toBe(expected);
 });

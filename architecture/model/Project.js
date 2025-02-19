@@ -4,7 +4,7 @@ class Project {
     this.projectURL = `projects/${projectName
       .split(" ")
       .join("_")
-      .toLowerCase()}/index.html`;
+      .toLowerCase()}/${projectName.split(" ").join("_").toLowerCase()}.html`;
   }
 
   get getProjectName() {

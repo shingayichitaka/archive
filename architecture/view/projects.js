@@ -17,7 +17,9 @@ const renderProjects = async function () {
     const html = `
             <div class="project">
               <h3 class="projectName">${index + 1}: ${value.projectName}</h3>
-              <p class="projectURL"><a href="${value.projectURL}">Link</a></p>
+              <p class="projectURL"><a href="${
+                value.projectURL
+              }" target="_blank">Link</a></p>
             </div>
             `;
     projectsContainer.insertAdjacentHTML("beforebegin", html);

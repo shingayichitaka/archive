@@ -6,6 +6,23 @@ const calcBMI = function (weight, height) {
   return bmi;
 };
 
+const getBMIRange = function (bmi) {
+  if (bmi < 18.5) {
+    return "Under-weight";
+  } else if (bmi < 25) {
+    return "Normal-weight";
+  } else if (bmi < 30) {
+    return "Over-weight";
+  } else {
+    return typeof bmi === "number" ? "Obese" : NaN;
+  }
+};
+
+const createBMIResult = function (bmi) {
+  const result = `${bmi} -- ${getBMIRange(bmi)}`;
+  return result;
+};
+
 describe("calcBMI()", () => {
   it("should return the correct BMI", () => {
     // Arrange
@@ -66,5 +83,45 @@ describe("calcBMI()", () => {
 
     // Assert
     expect(result).toBeTypeOf("number");
+  });
+});
+
+describe("getBMIRange()", () => {
+  it("should return the correct range given the correct value", () => {
+    // Arrange
+    const a = 15;
+    const b = 24.5;
+    const c = 29;
+    const d = 45;
+
+    // Act
+    const resultA = getBMIRange(a);
+    const resultB = getBMIRange(b);
+    const resultC = getBMIRange(c);
+    const resultD = getBMIRange(d);
+
+    // Assert
+    expect(resultA).toBe("Under-weight");
+    expect(resultB).toBe("Normal-weight");
+    expect(resultC).toBe("Over-weight");
+    expect(resultD).toBe("Obese");
+  });
+
+  it("should return a string if bmi is a number", () => {
+    // Arrange
+    const bmi = 45;
+    // Act
+    const result = getBMIRange(bmi);
+    // Assert
+    expect(result).toBeTypeOf("string");
+  });
+
+  it("should return NaN if the bmi provided is not a number", () => {
+    // Arrange
+    const bmi = "demo";
+    // Act
+    const result = getBMIRange(bmi);
+    // Assert
+    expect(result).toBeNaN();
   });
 });

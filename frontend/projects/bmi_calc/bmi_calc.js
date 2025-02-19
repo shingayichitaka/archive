@@ -8,6 +8,18 @@ const calcBMI = function (weight, height) {
   return bmi;
 };
 
+const getBMIRange = function (bmi) {
+  if (bmi < 18.5) return "Under-weight";
+  if (bmi < 25) return "Normal-weight";
+  if (bmi < 30) return "Over-weight";
+  return "Obese";
+};
+
+const createBMIResult = function (bmi) {
+  const result = `${bmi} -- ${getBMIRange(bmi)}`;
+  return result;
+};
+
 const generateBMI = function () {
   const weight = Number(weightInputEl.value);
   const height = Number(heightInputEl.value);
@@ -26,7 +38,7 @@ calcBtnEl.addEventListener("click", function () {
     messageEl.textContent = "Missing Value";
     clearMessage();
   } else {
-    messageEl.textContent = bmi;
+    messageEl.textContent = createBMIResult(bmi);
     clearMessage();
   }
 });

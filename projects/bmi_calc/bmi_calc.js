@@ -3,11 +3,15 @@ const heightInputEl = document.querySelector("#height");
 const calcBtnEl = document.querySelector(".calc");
 const messageEl = document.querySelector(".message");
 
-const calcBMI = function () {
-  const weight = Number(weightInputEl.value);
-  const height = Number(heightInputEl.value);
+const calcBMI = function (weight, height) {
   const bmi = Number((weight / height ** 2).toFixed(2));
   return bmi;
+};
+
+const generateBMI = function () {
+  const weight = Number(weightInputEl.value);
+  const height = Number(heightInputEl.value);
+  return calcBMI(weight, height);
 };
 
 const clearMessage = function () {
@@ -17,7 +21,7 @@ const clearMessage = function () {
 };
 
 calcBtnEl.addEventListener("click", function () {
-  const bmi = calcBMI();
+  const bmi = generateBMI();
   if (isNaN(bmi)) {
     messageEl.textContent = "Missing Value";
     clearMessage();

@@ -3,6 +3,10 @@
     {
       "projectName": "Bmi Calc",
       "projectURL": "/frontend/projects/bmi_calc/bmi_calc.html"
+    },
+    {
+      "projectName": "Simple Interest Calc",
+      "projectURL": "/frontend/projects/simple_interest_calc/simple_interest_calc.html"
     }
   ]
 }

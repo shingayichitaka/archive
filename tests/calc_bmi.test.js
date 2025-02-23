@@ -18,7 +18,8 @@ const getBMIRange = function (bmi) {
   }
 };
 
-const createBMIResult = function (bmi) {
+const createBMIResult = function (weight, height) {
+  const bmi = calcBMI(weight, height);
   const result = `${bmi} -- ${getBMIRange(bmi)}`;
   return result;
 };
@@ -123,5 +124,18 @@ describe("getBMIRange()", () => {
     const result = getBMIRange(bmi);
     // Assert
     expect(result).toBeNaN();
+  });
+});
+
+describe("createBMIResult", () => {
+  it("should return correct bmi and range result", () => {
+    // Arrange
+    const weight = 150;
+    const height = 1.83;
+    // Act
+    const result = createBMIResult(weight, height);
+    // Assert
+    const expected = "44.79 -- Obese";
+    expect(result).toBe(expected);
   });
 });
